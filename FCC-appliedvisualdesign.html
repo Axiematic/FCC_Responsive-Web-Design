@@ -2,17 +2,39 @@
 
 a:hover {
   color: red;
-}
+   }
 
 h1 {
 	text-transform: capitalize;
-}
+   }
 
 h4 {
 	position: relative;
 	bottom: 10px;
 	left: 30px;
-}
+  }
+
+div { /*This styling belongs to lines 138-145*/
+    width: 20%;
+    height: 20%;
+    margin-top: 10px;
+    float: right;
+  }
+  
+  .first {
+    background-color: red;
+    position: relative;
+    bottom: 60px;
+    z-index: 2;
+    right: 180px;
+  }
+ .second {
+    background-color: blue;
+    position: relative;
+    left: 10px;
+    bottom: 105px;
+    z-index: 1;
+  }
 
 </style>
 
@@ -71,7 +93,7 @@ img { <br>
 
  <p style=" opacity: 0.7;"> A value of 1 is opaque, which isn't transparent at all. A value of 0.5 is half see-through. A value of 0 is completely transparent.</p>
 
-<h1> Text-transform can change the case of text in various way</h1>
+<h1> Text-transform can change the case of text in various ways</h1>
 
 <p style="text-transform: lowercase;"> ALL LOWER CASE </p>
 <p style="text-transform: uppercase;"> all upper case </p>
@@ -107,3 +129,30 @@ img { <br>
 <p>One changed with absolute positioning the  element will be locked relative to its closest <strong>positioned</strong> ancestor. If you forget to add a position rule to the parent item the browser will keep looking up the chain and ultimately default to the body tag.</p>
 
 <h1> Fixed Positioning</h1>
+
+<p> This is a type of absolute positioning that locks an element relative to the browser window. Similar to absolute positioning, it's used with the CSS offset properties and also removes the element from the normal flow of the document. Other items no longer "realize" where it is positioned, which may require some layout adjustments elsewhere. The key differnce here is that the element <strong>WON'T</strong> move even when you scroll. This is why it is typically used with the navbar.</p>
+
+<h1> Float property: Another way to move an element left/right</h1>
+
+<p style="float: left; width: 50%;">Floating elements are removed from the normal flow of a document and pushed to either the left or right of their containing parent element.</p> 
+
+<p style="float: right; width: 50%;"> It's commonly used with the width property to specify how much horizontal space the floated element requires. This works well if you want to set two elements next to eachother (multiple columns).</p>
+
+<h1> Colours and their effects </h1>
+
+<h2> Complementary colours</h2>
+
+<p>When two colors are opposite each other on the wheel</p>
+
+
+
+
+
+<h1> Overlapping elements - z-indexing</h1>
+
+<p style="float: left;"> When elements are positioned to overlap, the element coming later in the HTML markup will, by default, appear on the top of the other elements.</p>
+
+<p style="float: left;""> To change this order, specify a "z-index" as an integer. The higher the number the higher tthe position is to the top.</p>
+
+<div class="first"></div>
+<div class="second"></div>
