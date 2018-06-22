@@ -1,0 +1,109 @@
+<style>
+
+a:hover {
+  color: red;
+}
+
+h1 {
+	text-transform: capitalize;
+}
+
+h4 {
+	position: relative;
+	bottom: 10px;
+	left: 30px;
+}
+
+</style>
+
+<h1> Visual balance using the text-align </h1>
+
+<ul>
+	<li> text-align: justify; causes all lines of text except the last line to meet the left and right edges of the line box.</li>
+
+	<li> text-align: center; centers the text</li>
+
+	<li> text-align: right; right-aligns the text</li>
+
+	<li> And text-align: left; (the default) left-aligns the text.</li>
+</ul>
+
+<h1> Adjust the height/width of an element using the width property</h1>
+
+<p> Values can be given in relative length/height units (such as em), absolute length units (such as px), or as a percentage of its containing parent element. </p>
+
+<p> eg. <br>
+img { <br>
+  width: 220px; <br>
+  height: 200px; <br>
+}
+</p>
+
+<h1> Emphasizing text with bold, underline, italics, strike through ands font weight.</h1>
+
+<p> wrap "strong" around the words you want to make <strong> bold, </strong> "u" tags around the words you want <u>underlined</u> , "em" <em>italicizes</em> and "del" <del>strikes through</del>. Change the font weight either inline or in the style sheet.</p> <p style="font-weight: 800;"> This is an example of font with the weight of 800.</p>
+
+<h1> Create a horizontal line (indicating a break) using the hr element </h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut felis ac neque interdum ultrices. Quisque eget lacus in odio congue condimentum rhoncus vel felis. Vivamus varius odio ut tellus egestas rutrum. Vestibulum mauris risus, pulvinar sed ex id, eleifend sagittis tellus. Aliquam erat volutpat. Sed elementum enim a magna aliquet, sit amet hendrerit nunc molestie. Nunc dictum sem non mi finibus venenatis. Nulla blandit tortor tortor, id dignissim justo posuere pulvinar. Donec mollis cursus purus. Proin pulvinar sodales velit. Nullam maximus nulla in purus tincidunt, vel ultricies felis feugiat. Ut finibus velit vitae dapibus volutpat. Etiam elementum velit eget odio dignissim feugiat. Nulla sit amet egestas neque, ut feugiat orci.</p>
+
+<hr>
+
+<p>Sed ipsum nulla, porta vel blandit ut, gravida sed metus. Curabitur consequat laoreet arcu sed molestie. Curabitur elit dui, sodales ut porttitor non, eleifend eget dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla odio nunc, tincidunt sed lobortis pulvinar, ullamcorper non ligula. Donec quis lorem dolor. Integer non purus consectetur, congue tortor sit amet, bibendum nulla. Suspendisse ac ligula erat.</p>
+
+<h1> Adjust the background-color property of text</h1>
+
+<p  style="background-color: rgba(45, 45, 45, 0.1)">RGB values can range from 0 to 255. The alpha value can range from 1, which is fully opaque or a solid color, to 0, which is fully transparent or clear. rgba() is great to use, as it allows you to adjust the opacity. This means you don't have to completely block out the background. This can obviously be done inline or in the style sheet</p>
+
+<h1> Add a box-shadow to an element</h1>
+
+<p> The box-shadow property applies one or more shadows to an element. </p>
+
+<p  style="width: 245px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);">
+    The box-shadow property takes values for offset-x (how far to push the shadow horizontally from the element), offset-y (how far to push the shadow vertically from the element), blur-radius, spread-radius and a color value, in that order. The blur-radius and spread-radius values are optional. </p>
+
+ <h1> Adjust the opacity/transparency of an element</h1>
+
+ <p style=" opacity: 0.7;"> A value of 1 is opaque, which isn't transparent at all. A value of 0.5 is half see-through. A value of 0 is completely transparent.</p>
+
+<h1> Text-transform can change the case of text in various way</h1>
+
+<p style="text-transform: lowercase;"> ALL LOWER CASE </p>
+<p style="text-transform: uppercase;"> all upper case </p>
+<p style="text-transform: capitalize;"> capitalize all first letters </p>
+<p style="text-transform: inherit;"> inherits the style of the parent element if applicable </p>
+
+<h1> Edit the line height of elements </h1>
+
+<p style="line-height: 50px;"> This is line-height: 50px; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+
+<p style="line-height: 5px;"> This is line-height: 5px; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+
+<h1> Adjust the hover state of an element </h1>
+
+<p> A pseudo-class is a keyword that can be added to selectors, in order to select a specific state of the element. For example, the styling of an anchor tag can be changed for its hover state using the :hover pseudo-class selector. </p>
+
+<p> For example the text colour will change to red when you hover over: "<a href="https://www.w3schools.com/css/css_pseudo_classes.asp"> pseudo-classes</a>"</p> 
+
+<h1> Relative positioning </h1>
+
+<p>CSS treats each HTML element as its own box, which is usually referred to as the CSS Box Model. Block-level items automatically start on a new line (think headings, paragraphs, and divs) while inline items sit within surrounding content (like images or spans). The default layout of elements in this way is called the normal flow of a document, but CSS offers the position property to override it.</p>
+
+<p>Setting an element to relative allows you to specify how CSS should move it relative to its current position. It pairs with the CSS offset properties of left/right and top/bottom. These say how many pixels, percentages, or ems to move the item away from where it's normal position.</p>
+
+<h4> For example this text has been moved 10px away from the bottom and 30px away from the left.</h4>
+
+<p> Changing an element's position to relative does not remove it from the normal flow - other elements around it still behave as if that item were in its default position.</p>
+
+<h1> Absolute positioning</h1>
+
+<p>Absolute positioning locks the element in place relative to its parent container. It removes the element from the normal flow of the document, so surrounding items ignore it</p>
+
+<p>One changed with absolute positioning the  element will be locked relative to its closest <strong>positioned</strong> ancestor. If you forget to add a position rule to the parent item the browser will keep looking up the chain and ultimately default to the body tag.</p>
+
+<h1> Fixed Positioning</h1>
