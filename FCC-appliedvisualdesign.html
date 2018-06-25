@@ -26,12 +26,12 @@ div { /*This styling belongs to lines 138-145*/
     position: relative;
     bottom: 60px;
     z-index: 2;
-    right: 180px;
+    right: 150px;
   }
  .second {
     background-color: blue;
     position: relative;
-    left: 10px;
+    left: 60px;
     bottom: 105px;
     z-index: 1;
   }
@@ -142,7 +142,67 @@ img { <br>
 
 <h2> Complementary colours</h2>
 
-<p>When two colors are opposite each other on the wheel</p>
+<p>When two colors are opposite each other on the wheel. They have the characteristic that if they are combined, they "cancel" each other out and create a gray color. However, when placed side-by-side, these colors appear more vibrant and produce a strong visual contrast. </p>
+
+<h2> Tertiary colours</h2>
+
+<p> Red, green and blue  are primary colors. Mixing two primary colors creates secondary colors . These secondary colors happen to be the complement to the primary color not used in their creation, and are opposite to that primary color on the color wheel. For example, magenta is made with red and blue, and is the complement to green. Tertiary colors are the result of combining a primary color with one of its secondary color neighbors.  For example, red (primary) and yellow (secondary) make orange.</p>
+
+<h2> Adjusting colour hue and tone. </h2>
+
+<p> Colors have several characteristics including hue, saturation, and lightness. CSS3 introduced the hsl() property as an alternative way to pick a color by directly stating these characteristics. </p>
+
+<p> Hue - Picture a spectrum of colors starting with red on the left, green in the middle and blue on right, the hue is where a color fits along this line. In hsl(), hue uses a color wheel concept instead of the spectrum, where the angle of the color on the circle is given as a value between 0 and 360. </p>
+
+<p> Saturation -Amount of gray in a color. A fully saturated color has no gray in it. This is given as a percentage with 100% being fully saturated. </p>
+
+<p> Lightness - amount of white or black in a color. A percentage is given ranging from 0% (black) to 100% (white), where 50% is the normal color. </p>
+
+<p> Tone - Mixing white with a pure hue creates a tint of that color, and adding black will make a shade. Alternatively, a tone is produced by adding gray or by both tinting and shading. </p>
+
+<p> Gradual CSS linear gradient - Colour gradients can be achieved by accessing the background property's linear-gradient() function. Here is the general syntax: background: linear-gradient(gradient_direction, color 1, color 2, color 3, ...); The first argument specifies the direction from which color transition starts -  90deg makes a vertical gradient and 45deg is angled and so on. </p>
+
+<p> Textured backgrounds - Add a pattern to the background property by linking to a url. eg, background: url(https://i.imgur.com/MJAkxbh.png); </p>
+
+
+
+
+
+
+
+
+<h1> Animation </h1>
+
+<p> Animation count - This determines how many times the animation runs through. Making this infiniter will result in the animation playing indefinitely.</p>
+
+<p> Animation timing - Controls how quickly an animated element changes during it's duration. </p>
+	<ul>
+		<li> ease  - starts slow, speeds up in the middle, and then slows down again in the en </li>
+		<li> ease-out - quick in the beginning then slows down. </li>
+		<li> ease-in - slow in the beginning, then speeds up at the end. </li>
+		<li> linear - constant animation speed throughout. </li>
+	</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
