@@ -1,0 +1,42 @@
+<main>
+
+<h1> Applied Accessibility </h1>
+
+<h2> Text alternative for images </h2>
+<p> Alt text describes the content of the image and provides a text-alternative. This helps in case the image fails to load or can't be seen by a user. It's also used by search engines to understand what an image contains to include it in search resultsPer HTML5 specification, this is now considered mandatory. However, sometimes images are grouped with a caption already describing them, or are used for decoration only. The img still needs an alt attribute, but it can be set to an empty string </p>
+
+<p> eg. <img src="urltoimg" alt="explanation"> <p>
+
+<h2> HTML5's new accessibility features </h2>
+
+<p> <strong>main</strong> - wraps around the main content, and there should be only one per page. It's not meant to include items that repeat across pages, like navigation links or banners. The main tag also has an embedded landmark feature that assistive technology can use to quickly navigate to the main content. If you've ever seen a "Jump to Main Content" link at the top of a page, using a main tag automatically gives assistive devices that functionality. </p>
+
+<p> <strong>article</strong> - a sectioning element, and is used to wrap independent, self-contained content. The tag works well with blog entries, forum posts, or news articles. An article is for standalone content.
+
+<p> <strong>section</strong> - similar to an article but it is a section is for grouping thematically related content. They can be used within each other, as needed. For example, if a book is the article, then each chapter is a section. When there's no relationship between groups of content, then use a <strong>div</strong>. </p>
+
+<h3> In summary: </h3>
+
+<ul>
+<li> "div" - groups content</li>
+<li> "section" - groups related content</li>
+<li> "article" - groups independent, self-contained content</li>
+</ul>
+
+<p> <strong>header</strong> - used to wrap introductory information or navigation links for its parent tag, and works well around content that's repeated at the top on multiple pages. <strong>header</strong> is meant for use in the body tag of your HTML document. This is different than the head element, which contains the page's title, meta information, etc.</p>
+
+<p> <strong>nav</strong> - This tag is meant to wrap around the main navigation links in your page. If there are repeated site links at the bottom of the page, it isn't necessary to markup those with a nav tag as well. Using a footer is sufficient. </p>
+
+<p> <strong>footer</strong> - Similar to header and nav, the footer element has a built-in landmark feature that allows assistive devices to quickly navigate to it. It's primarily used to contain copyright information or links to related documents that usually sit at the bottom of a page. </p>
+
+<p> <strong>audio</strong> - wraps sound or audio stream content in your markup. Audio content also needs a text alternative to be accessible to people who are deaf or hard of hearing. This can be done with nearby text on the page or a link to a transcript. </p>
+
+<p> eg. </p>
+<audio id="meowClip" controls>
+  <source src="audio/meow.mp3" type="audio/mpeg" />
+</audio>
+
+<p> the includsion of the boolean attribute "controls" specifies that audio/video controls should be displayed ie. Play, Pause etc. </p>
+<h2>  </h2>
+
+</main>
