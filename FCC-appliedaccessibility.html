@@ -9,19 +9,13 @@
 
 <h2> HTML5's new accessibility features </h2>
 
+<h3> Appropriate tag names </h3> 
+
 <p> <strong>main</strong> - wraps around the main content, and there should be only one per page. It's not meant to include items that repeat across pages, like navigation links or banners. The main tag also has an embedded landmark feature that assistive technology can use to quickly navigate to the main content. If you've ever seen a "Jump to Main Content" link at the top of a page, using a main tag automatically gives assistive devices that functionality. </p>
 
 <p> <strong>article</strong> - a sectioning element, and is used to wrap independent, self-contained content. The tag works well with blog entries, forum posts, or news articles. An article is for standalone content.
 
 <p> <strong>section</strong> - similar to an article but it is a section is for grouping thematically related content. They can be used within each other, as needed. For example, if a book is the article, then each chapter is a section. When there's no relationship between groups of content, then use a <strong>div</strong>. </p>
-
-<h3> In summary: </h3>
-
-<ul>
-<li> "div" - groups content</li>
-<li> "section" - groups related content</li>
-<li> "article" - groups independent, self-contained content</li>
-</ul>
 
 <p> <strong>header</strong> - used to wrap introductory information or navigation links for its parent tag, and works well around content that's repeated at the top on multiple pages. <strong>header</strong> is meant for use in the body tag of your HTML document. This is different than the head element, which contains the page's title, meta information, etc.</p>
 
@@ -29,14 +23,62 @@
 
 <p> <strong>footer</strong> - Similar to header and nav, the footer element has a built-in landmark feature that allows assistive devices to quickly navigate to it. It's primarily used to contain copyright information or links to related documents that usually sit at the bottom of a page. </p>
 
-<p> <strong>audio</strong> - wraps sound or audio stream content in your markup. Audio content also needs a text alternative to be accessible to people who are deaf or hard of hearing. This can be done with nearby text on the page or a link to a transcript. </p>
+<p> <strong>audio</strong> - wraps sound or audio stream content in your markup. Audio content also needs a text alternative to be accessible to people who are deaf or hard of hearing. This can be done with nearby text on the page or a link to a transcript. The includsion of the boolean attribute "controls" specifies that audio/video controls should be displayed ie. Play, Pause etc. </p>
 
 <p> eg. </p>
 <audio id="meowClip" controls>
   <source src="audio/meow.mp3" type="audio/mpeg" />
 </audio>
 
-<p> the includsion of the boolean attribute "controls" specifies that audio/video controls should be displayed ie. Play, Pause etc. </p>
+<p> <strong>figure / figcaption </strong> - These items wrap a visual representation (like an image, diagram, or chart) along with its caption. This gives a two-fold accessibility boost by both semantically grouping related content, and providing a text alternative that explains the figure. For data visualizations like charts, the caption can be used to briefly note the trends or conclusions for users with visual impairments.</p>
+
+<p> eg. </p>
+<figure>
+  <img src="roundhouseDestruction.jpeg" alt="Photo of Camper Cat executing a roundhouse kick">
+  <br>
+  <figcaption>
+    Master Camper Cat demonstrates proper form of a roundhouse kick.
+  </figcaption>
+</figure>
+
+<h4> In summary: </h4>
+
+<ul>
+<li> "div" - groups content.</li>
+<li> "section" - groups related content.</li>
+<li> "article" - groups independent, self-contained content.</li>
+<li> "header" - wraps around introductory information or navigation links.</li>
+<li> "nav" - wraps around navbar links. </li>
+<li> "footer" - contain copyright information or links at the bottom pf the page.</li>
+<li> "audio" - wraps sound or audio stream content in your markup.</li>
+</ul>
+
+<h3> Appropriate attributes in forms</h3>
+
+<p> <strong>label</strong> - wraps the text for a specific form control item, usually the name or label for a choice. This ties meaning to the item and makes the form more readable. The <strong>for</strong> attribute on a <strong>label</strong> tag explicitly associates that label with the form control and is used by screen readers. The value of the for attribute must be the same as the value of the id attribute of the form control</p>
+
+<p> eg. </p>
+<form>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name">
+</form>
+
+<p> <strong>fieldset / legend </strong> - The <strong>fieldset</strong> tag surrounds an entire grouping of radio buttons to indicate a user must choose one option from a set. It often uses a <strong>legend</strong> tag to provide a description for the grouping, which is read by screen readers for each choice in the fieldset element. These are not needed if the choice is self-explanatory eg male or female</p>
+
+<p> eg. </p>
+<form>
+  <fieldset>
+    <legend>Choose one of these three items:</legend>
+    <input id="one" type="radio" name="items" value="one">
+    <label for="one">Choice One</label><br>
+    <input id="two" type="radio" name="items" value="two">
+    <label for="two">Choice Two</label><br>
+    <input id="three" type="radio" name="items" value="three">
+    <label for="three">Choice Three</label>
+  </fieldset>
+</form>
+
+<p> <strong>Date picker</strong> - the <strong>type</strong> attribute indicates what kind of inpuit wwill be created. HTML5 introduced a date picker which makes filling in forms much easier. </p>
 <h2>  </h2>
 
 </main>
