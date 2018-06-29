@@ -79,6 +79,22 @@
 </form>
 
 <p> <strong>Date picker</strong> - the <strong>type</strong> attribute indicates what kind of inpuit wwill be created. HTML5 introduced a date picker which makes filling in forms much easier. </p>
-<h2>  </h2>
+
+<h2>Elements only visable  to a screen reader with custom  CSS</h2>
+
+<p> The following CSS will make a visual format (like a chart) more SR fieldy as a hidden alternative format (like a table). The following CSS will aaccomplish this. 
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  overflow: hidden;
+}
+
+</p>
+
+<p> Display: none; or visibility: hidden; hides content for everyone, including screen reader users. Zero values for pixel sizes, such as width: 0px; height: 0px; removes that element from the flow of your document, meaning screen readers will ignore it </p>
 
 </main>
