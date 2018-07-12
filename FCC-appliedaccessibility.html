@@ -82,19 +82,49 @@
 
 <h2>Elements only visable  to a screen reader with custom  CSS</h2>
 
-<p> The following CSS will make a visual format (like a chart) more SR fieldy as a hidden alternative format (like a table). The following CSS will aaccomplish this. 
+<p> The following CSS will make a visual format (like a chart) more SR fieldy as a hidden alternative format (like a table). The following CSS will accomplish this: </p>
 
-.sr-only {
-  position: absolute;
-  left: -10000px;
-  width: 1px;
-  height: 1px;
-  top: auto;
-  overflow: hidden;
-}
+<p>
+.sr-only { <br>
+  position: absolute; <br>
+  left: -10000px; <br>
+  width: 1px; <br>
+  height: 1px; <br>
+  top: auto; <br>
+  overflow: hidden; <br>
+} <br>
 
 </p>
 
 <p> Display: none; or visibility: hidden; hides content for everyone, including screen reader users. Zero values for pixel sizes, such as width: 0px; height: 0px; removes that element from the flow of your document, meaning screen readers will ignore it </p>
 
+<h2> Improve Readability with Suffcient Contrast ratio's </h2>
+
+<p> Low contrast between the foreground and background colors can make text difficult to read. Sufficient contrast improves the readability of your content </p>
+
+<p> The Web Content Accessibility Guidelines (WCAG) recommend at least a 4.5 to 1 contrast ratio for normal text. The ratio is calculated by comparing the relative luminance values of two colors. This ranges from 1:1 for the same color, or no contrast, to 21:1 for white against black </p>
+
+<p> There are tools online to caluculate this ratio such as <a href="http://contrast-ratio.com">contrast-ratio</a> </p>
+
+<h2> Avoid Colorblindness Issues by Using Sufficient Contrast </h2>
+
+<p> Colour alone should not be used as the only way to convey important information because screen reader users won't see it. </p>
+
+<p> Colorblind users have trouble distinguishing some colors from others - usually in hue but sometimes lightness as well. You may recall the contrast ratio is calculated using the relative luminance (or lightness) values of the foreground and background colors. </p>
+
+<p> In practice, the 4.5:1 ratio can be reached by darkening the darker color and lightening the lighter one with the aid of a color contrast checker. </p>
+
+<h2> Tabindex to Add Keyboard Focus to an Element </h2>
+
+<p> The HTML tabindex attribute has three distinct functions relating to an element's keyboard focus. When it's on a tag, it indicates that element can be focused on. The value (an integer that's positive, negative, or zero) determines the behavior. </p>
+
+<p>Certain elements, such as links and form controls, automatically receive keyboard focus when a user tabs through a page. It's in the same order as the elements come in the HTML source markup. This same functionality can be given to other elements, such as div, span, and p, by placing a tabindex="0" attribute on them.</p>
+
+<p>Note - A negative tabindex value (typically -1) indicates that an element is focusable, but is not reachable by the keyboard. This method is generally used to bring focus to content programmatically (like when a div used for a pop-up window is activated. Using tabindex also enables the CSS pseudo-class :focus to work on the p tag.</p>
+
+<p> The tabindex attribute also specifies the exact tab order of elements. This is achieved when the value of the attribute is set to a positive number of 1 or higher.</p>
+
+<p>Setting a tabindex="1" will bring keyboard focus to that element first. Then it cycles through the sequence of specified tabindex values (2, 3, etc.), before moving to default and tabindex="0" items. </p>
+
+<p>It's important to note that when the tab order is set this way, it overrides the default order (which uses the HTML source). This may confuse users who are expecting to start navigation from the top of the page. This technique may be necessary in some circumstances </p>
 </main>
