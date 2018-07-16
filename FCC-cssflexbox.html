@@ -1,0 +1,69 @@
+<h2> Using Flex containers to make rows and columns</h2>
+
+<p> Adding display: flex to an element turns it into a flex container. This makes it possible to align any children of that element into rows or columns. You do this by adding the flex-direction property to the parent item and setting it to row or column. Creating a row will align the children horizontally, and creating a column will align the children vertically. </p>
+
+<p> Other options for flex-direction are row-reverse and column-reversePlacing the CSS property display: flex; on an element allows you to use other flex properties to build a responsive page. </p>
+
+<p> The default value property is row. </p>
+
+<h2> Aligning content using the justify-content Property</h2>
+
+<p> Sometimes the flex items within a flex container do not fill all the space in the container. It is common to want to tell CSS how to align and space out the flex items a certain way. This is where justify-content comes in. </p>
+
+<p> Recall that setting a flex container as a row places the flex items side-by-side from left-to-right. A flex container set as a column places the flex items in a vertical stack from top-to-bottom. For each, the direction the flex items are arranged is called the main axis. For a row, this is a horizontal line that cuts through each item. And for a column, the main axis is a vertical line through the items. </p>
+
+<p> The several options for spacing flex items along the main axis: </p>
+
+<ul>
+<li>justify-content: aligns all the flex items to the center inside the flex container</li>
+<li>flex-start: aligns items to the start of the flex container. Row - the left of the container. Column - pushes the items to the top of the container.</li>
+<li>flex-end: aligns items to the end of the flex container. (Direct opposite of flex-start)</li>
+<li> space-between: aligns items to the center of the main axis, with extra space placed between the items. First and last items are pushed to the very edge of the container (row, first-far left, last-far right) (column, top, bottom). Other items between them are spaced evenly. </li>
+<li> space-around: similar to space-between but the first and last items are not locked to the edges of the container, the space is distributed around all the items </li>
+</ul>
+
+<p> Flex containers also have a cross axis which is the opposite of the main axis. For rows, the cross axis is vertical and for columns, the cross axis is horizontal.</p>
+
+<h2> Aligning content using the align-items Property</h2>
+
+<p>similar to justify-content however instead of working on the <strong>main axis</strong> it works on the <strong>cross axis</strong>. This is the opposite axis of the main axis ie, for rows it's vertical, for columns it's horizontal.</p>
+
+<p>The different values avaliable for align-items include the same options from the main axis but on the changed axis (ie keeping in mind a row is now vertical and a column is now vertical).</p>
+
+<h2> Using the flex-wrap Property to Wrap a Row or Column </h2>
+
+<p> By default, a flex container will fit all flex items together. For example, a row will all be on one line. CSS flexbox has a feature to split a flex item into multiple rows (or columns). </p>
+
+<p>Using the flex-wrap property, it tells CSS to wrap items. This means extra items move into a new row or column. The break point of where the wrapping happens depends on the size of the items and the size of the container.</p>
+
+<p> CSS also has options for the direction of the wrap: </p>
+
+<ul>
+	<li>nowrap: Default setting, doesn't wrap items.</li>
+	<li>wrap: wraps items from left to right (if in a row) and top to bottom (if in a column). </li>
+	<li>wrap-reverse: direct opposite. right to left, bottom to top.</li>
+</ul>
+
+<p> All of the above mentioned apply to the flex <strong>container</strong>. There are also a few propertiees for the items inside themselves. </p>
+
+<p><strong>flex-shrink</strong> - allows item to shrink if the flex container is too small. Items would shrink when the overall width of the parent container is smaller than the combined widths of the items.</p>
+
+<p> flex shrink uses numbers as values, the higher the number the smaller the proportion. IE if one item has a flex-shrink of 1, another has 3. The one with the three will shrink three times as much as the other. </p>
+
+<p><strong>flex-grow</strong> - Basically the opposite of flex shrink. Flex-grow controls the size of items when the parent container expands. Numbers are used as before. </p>
+
+<p><strong>flex-basis</strong> - Specifies the size of the item BEFORE CSS adjustments (shrink/grow). </p>
+
+<p>Flex-basis makes use of px, em, %, etc. If set to auto items are sized based on the content. </p>
+
+<p>There is a shortcut to set several flex properties (grow, shrink and basis). eg of shortcut:</p>
+
+<p> flex: 1 0 10px. (flex grow of 1, shrink of 0 and a basis equals 10px).</p>
+
+<p> the order property is used to tell CSS the order of how flex items appear in the flex container. Pbviously by default they will follow the order they appear in the HTML. You use number values for this.</p>
+
+<h2> Using the align-self property</h2>
+
+<p> This property allows you to adjust each item's alignment individually, instead of setting them all at once. This is useful sine properies such as float and vertical align don't worl on flex items.  </p> 
+
+<p> you would use the same values as align-items. Align-self will override any value set by align-items.</p>
