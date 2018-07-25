@@ -1,8 +1,28 @@
 <h1>  CSS Grids </h1>
 
-Turn any HTML element into a grid container by setting its <strong>display</strong> property to <strong>grid</strong>. This gives you the ability to use all the other properties associated with CSS Grid.
+<p>Turn any HTML element into a grid container by setting its <strong>display</strong> property to <strong>grid</strong>. This gives you the ability to use all the other properties associated with CSS Grid.</p>
 
-Note
-In CSS Grid, the parent element is referred to as the container and its children are called items.
+<p>Note:
+In CSS Grid, the parent element is referred to as the container and its children are called items.</p>
 
-ie. <strong>display: grid;</strong>
+<p>ie. <strong>display: grid;</strong></p>
+
+<h2> Add columns with grid-template-columns </h2>
+
+<p>ie. <strong>grid-template-columns: 50px 50px;</strong> this will add two columns 50px wide each. To add more columnns list more items separated with a space  each time. </p>
+
+<h2> Add Rows with grid-template-rows </h2>
+
+<p> To manually adjust the automated rows use <strong>grid-template-rows</strong>. Use thee same setup as before.</p>
+
+<p> ie. <strong>grid-template-rows: 50px 50px;</strong>
+
+<p> units for colums and rows </p>
+
+<p>px, em, fr(fraction of avaliable/remaining space), auto (sets to the width or height of its contents automatically), % (adjusts R/C to a percentage of the container). You can also use a combination of all of these eg. </p>
+
+<p>grid-template-columns: auto 50px 10% 2fr 1fr;</p> 
+
+<h2> Create gaps between your columns/rows with grid-column-gap / grid-row-gap</h2>
+
+<p>grid-column-gap: 10px; will make a 10px space between all our columns</p>
