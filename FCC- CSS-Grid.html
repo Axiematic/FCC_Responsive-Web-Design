@@ -1,5 +1,7 @@
 <h1>  CSS Grids </h1>
 
+<h2> Properties for grid containers</h2>
+
 <p>Turn any HTML element into a grid container by setting its <strong>display</strong> property to <strong>grid</strong>. This gives you the ability to use all the other properties associated with CSS Grid.</p>
 
 <p>Note:
@@ -7,11 +9,11 @@ In CSS Grid, the parent element is referred to as the container and its children
 
 <p>ie. <strong>display: grid;</strong></p>
 
-<h2> Add columns with grid-template-columns </h2>
+<h3> Add columns with grid-template-columns </h3>
 
 <p>ie. <strong>grid-template-columns: 50px 50px;</strong> this will add two columns 50px wide each. To add more columnns list more items separated with a space  each time. </p>
 
-<h2> Add Rows with grid-template-rows </h2>
+<h3> Add Rows with grid-template-rows </h3>
 
 <p> To manually adjust the automated rows use <strong>grid-template-rows</strong>. Use thee same setup as before.</p>
 
@@ -23,6 +25,63 @@ In CSS Grid, the parent element is referred to as the container and its children
 
 <p>grid-template-columns: auto 50px 10% 2fr 1fr;</p> 
 
-<h2> Create gaps between your columns/rows with grid-column-gap / grid-row-gap</h2>
+<h3> Create gaps between your columns/rows with grid-column-gap / grid-row-gap / grid-gap</h3>
 
 <p>grid-column-gap: 10px; will make a 10px space between all our columns</p>
+
+<p> A simplified version of this is grid-gap. If grid-gap has one value, it will a create a gap between all rows and columns. If there are two values, first value will set the gap between the rows and the second for the columns.</p>
+
+<h2> Properties for grid items themselves</h2>
+
+<h3>grid-row / grid-column</h3>
+
+<p> The hypothetical horizontal and vertical lines that create the grid are referred to as lines. These lines are numbered starting with 1 at the top left corner of the grid and move right for columns and down for rows. To control the amount of columns an item will consume, you can use the grid-column property in conjunction with the line numbers you want the item to start and stop at.</p>
+
+<p>ie. grid-column: 1/3; will make the specified item start at the origin (1,1) and end at the third horizontal line (3,1)</p>
+
+<p>ie. grid-row: 2 / 4; will make the item start at the second line on the vertical axis and end at the fourth. </p>
+
+<h3> Aligning the contents of a cell horizontally/vertically</h3>
+
+<p> By default items in cells will stretch to fill the width of a cell. You can change this by adding "justify-self:" along with  "start" (left align)/ "center"/ "end". </p>
+
+<p> To align an item vertically use "align self:" along with one of the same options as above.</p>
+
+<p> To align them horizontally and vertically at the same by using justify-item in the <strong>container</strong> CSS. This uses the same properties as above. </p>
+
+<p>NB Use <strong>align items</strong> in a grid container's CSS to vertically align all items.</p>
+
+<h3> Grouping cells </h3>
+
+<p> You can group cells together (an area) and give them a custom name by using the "grid-template-area" property. <strong>This happens in the container CSS.</strong>. 
+
+<p>eg. grid-template-areas:<br>
+  "header header header"<br>
+  "advert content content"<br>
+  "footer footer footer";<br>
+</p>
+
+<p>This code merges the top three cells together into an area named header, the bottom three cells into a footer area, and it makes two areas in the middle row; advert and content. Every word in the code represents a cell and every pair of quotation marks represent a row. You can also use a "." to designate an empty cell in the grid</p>
+
+<p> You can add items to to areas at a later stage by specifying their grid area in their CSS.</p>
+
+<p> eg. .item1 { grid-area: header; } This will add "item1" to the grid area"header". </p>
+
+<p> If you didn't add an area template to begin with you can place an item on the fly. </p>
+
+<p> ie. "item1 { grid-area: 1/1/2/4; }". This is using the line numbers to define where the area for this item will be. ie grid-area: horizontal line to start at 1/ vertical line to start at 1/ horizontal line to end at 2/ vertical line to end at 4;
+
+<h3> Reducing repetition using the repeat function</h3>
+
+<p> ie. "grid-template-rows: repeat(100, 50px);". This will create 100 rows each with a height of 50px.</p>
+
+<p> You can also use this to repeat certain aspects ie. "grid-template-columns: repeat(2, 1fr 50px) 20px;" this translates to "grid-template-columns: repeat(number of times of repetition, specifics to be repeated) outlying specifics" ie "grid-template-columns: 1fr 50px 1fr 50px 20px;". 
+
+<h3> Making the height/ Width of a cell relative to the remaining space left in the container with the minmax property.</h3>
+
+<p> This is useful in limiting the size of an item in the case that it's container changes size. Specifying the acceptable range eg. "grid-template-columns: 100px minmax(50px, 200px);" This will set the first column to 100px and the second column to between 50-200px depanding on the remaining space. 
+
+<h3> Use Media Queries to Create Responsive Layouts </h3>
+
+<p> CSS Grid can be an easy way to make your site more responsive by using media queries to rearrange grid areas, change dimensions of a grid, and rearrange the placement of items. </p>
+
